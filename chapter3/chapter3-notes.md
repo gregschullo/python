@@ -19,3 +19,5 @@ The pop() method removes the last item in a list, but it lets you work with that
 when you want to delete an item from a list and not use that item in any way, use the del statement; if you want to use an item as you remove it, use the pop() method.
 
 If you only know the value of the item you want to remove, you can use the remove() method.
+
+- the remove method only removes the first instance of the value you specify. If a value appears more than once in a list, you would need to use a loop to remove all instances.  
