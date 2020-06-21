@@ -21,3 +21,7 @@ when you want to delete an item from a list and not use that item in any way, us
 If you only know the value of the item you want to remove, you can use the remove() method.
 
 - the remove method only removes the first instance of the value you specify. If a value appears more than once in a list, you would need to use a loop to remove all instances.  
+
+List Sorting Methods:  
+sort() - permanently sorts a list  
+sorted() - displays a list as if it were sorted, but does not alter the list  
