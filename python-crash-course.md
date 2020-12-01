@@ -7,6 +7,19 @@ title: Python Crash Course
 
 ## Chapter 2 Notes - Variables and Simple Data Types
 
+### Strings
+
+f-strings - the f is for format, because Python formats the string by replacing the name of any variable in braces with its value.  
+Example: `print(f"This is a string with a variable called {variable} in it!")`  
+It is possible to format variables with functions within strings with f-strings  
+
+- lower()
+  - {variable.lower()}
+- upper()
+  - {variable.upper()}
+- title()
+  - {variable.title()}
+
 ## Chapter 3 Notes - Introducing Lists
 
 A list is a collection of items in a particular order.  
@@ -67,3 +80,47 @@ Blank Lines - to group parts of your program visually, use blank lines.
 ## Chapter 5 Notes - If Statements
 
 The technique of using a series of simple if statements with no elif or else blocks makes sense when more than one condition could be True and you want to take action on every condition that is True.
+
+## Chapter 6 Notes - Dictionaries
+
+Dictionaries allow you to connect pieces of related information.  
+A dictionary in python is a collection of key value pairs.  
+To start filling an empty dictionary, define a dictionary with an empty set of braces and then add each key-value pair on its own line.  
+
+```python
+dictionary_name = {}  
+dictionary_name['color'] = 'green'  
+dictionary_name['number'] = 5  
+
+print(dictionary_name)  
+{'color': 'green', 'number': 5}
+```
+
+To update an item in a dictionary, assign a new value to the key in the dictionary.  
+`dictionary_name['color'] = 'yellow'`  
+
+To delete a piece of information stored in a dictionary, use the del statement to completely remove a key-value pair.  
+`del dictionary_name['points']`  
+
+The get() method can be used to get a value in dictionary as well as handle instances when a key doesn't exist.  
+`dictionary_name.get('size', 'size is not assigned')`  
+
+If you leave out the second argument in the call to get() and the key doesn’t exist, Python will return the value None. The special value None means “no value exists.” This is not an error: it’s a special value meant to indicate the absence of a value.  
+
+the items() method will display all key value pairs in a dictionary.  
+the keys() method will display all the key values in a dictionary.  
+the values() method will display all the values in a dictionary without the keys.  
+the sorted() method will display all keys in a dictionary in alphabetical order.  
+the set() method will display all values in a dictionary without the keys and remove duplicates.  
+
+You can build a set directly using braces and separating the elements with commas. It is easy to mistake sets for dictionaries as they both are defined with curly braces and separated with commas. You know it's a set if there are no key value pairs visible.  
+
+**nesting** - store multiple dictionaries in a list, or a list of items as a value in a dictionary.  
+You can nest dictionaries inside a list, a list of items inside a dictionary, or even a dictionary inside another dictionary.  
+
+You should not nest lists and dictionaries too deeply. If you’re nesting items deeply or you’re working with someone else’s code with significant levels of nesting, most likely there is a simpler way to solve the problem.  
+
+## Chapter 7 - User Input and While Loops
+
+input()
+The input() function pauses your program and waits for the user to enter some text. Once Python receives the user’s input, it assigns that input to a variable to make it convenient for you to work with.  

@@ -1,0 +1,2 @@
+# 1. Slack app that takes information from various APIs and puts them into appropriate channels
+# 2. Take household utility numbers (electricity, water usage, etc.) and make them human readable and report on them
