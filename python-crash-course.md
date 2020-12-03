@@ -34,9 +34,7 @@ You can add a new element at any position in your list by using the insert() met
 
 If you know the position of the item you want to remove from a list, you can use the del statement.
 
-The pop() method removes the last item in a list, but it lets you work with that item after removing it.
-
-The pop() method removes the last item in a list, but it lets you work with that item after removing it.
+The pop() method removes the last item in a list, but it lets you work with that item after removing it.  
 
 when you want to delete an item from a list and not use that item in any way, use the del statement; if you want to use an item as you remove it, use the pop() method.
 
@@ -124,3 +122,48 @@ You should not nest lists and dictionaries too deeply. If you’re nesting items
 
 input()
 The input() function pauses your program and waits for the user to enter some text. Once Python receives the user’s input, it assigns that input to a variable to make it convenient for you to work with.  
+The input() function interprets everything as a string.  
+
+int()  
+use the int() function to convert string numbers to integers.  
+
+**modulo** - (%) divides one number by another number and returns the remainder.  
+
+**while loops** - the for loop takes a collection of items and runs code once for each item in the collection. The while loop runs as long as (or while) a specified condition is true.  
+
+**flag** - a variable that acts as a signal to the program.  
+**break** - a keyword used to immediately exit out of a loop.  
+
+The break statement can be used in any of Python's loops.  
+
+**continue** - a statement used to return to the beginning of the loop based on the result of a conditional test.  
+Avoid infinite loops. Every while loop needs a way to stop running so it won’t continue to run forever.  
+To avoid writing infinite loops, test every while loop and make sure the loop stops when you expect it to.  
+
+You shouldn’t modify a list inside a for loop because Python will have trouble keeping track of the items in the list. To modify a list as you work through it, use a while loop.  
+
+## Chapter 8 - Functions
+
+**modules** - files separate from the main program that often contain functions that can be used in your main program.  
+**function definition** - tells Python the name of the function and any information required to perform its duty.  
+**docstring** - a description of what the function does encased in triple quotes.  
+**parameter** - a piece of information a function needs to perform its duty.  
+**argument** - a piece of information that’s passed from a function call to a function.  
+
+Note: People sometimes speak of arguments and parameters interchangeably. Don’t be surprised if you see the variables in a function definition referred to as arguments or the variables in a function call referred to as parameters.  
+
+**positional arguments** - arguments that need to be in the same order as the function parameters.  
+**keyword arguments** - a name-value pair that you pass to a function. Each argument consists of a variable name and a value; and lists and dictionaries of values.  
+Note: When you use keyword arguments, be sure to use the exact names of the parameters in the function’s definition.  
+
+**return value** - the value returned from a function.  
+
+It is possible to have optional arguments.  
+
+A function can return any kind of value you need it to, including more complicated data structures like lists and dictionaries.  
+
+You can send a copy of a list to a function with slice notation `function_name(list_name[:])`  
+
+A function can accept several kinds of arguments(positional and arbitrary). The parameter that accepts an arbitrary number of arguments must be placed last in the function definition.  
+
+A double asterisks before a parameter (**parameter_name) will create an empty dictionary called parameter_name and pack whatever key-value pairs it receives into the dictionary.
