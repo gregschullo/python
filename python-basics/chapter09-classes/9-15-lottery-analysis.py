@@ -14,13 +14,12 @@ i = 0
 j = 0
 
 while winning_ticket is not my_ticket:
-    if winning_ticket is not my_ticket:
         while i < 4:
             winning_ticket += choice(lottery)
             i += 1
-    else:
-        j += 1
-        print(winning_ticket)
+        if winning_ticket is not my_ticket:
+            # Code to run winning ticket number loop again
+            j += 1
 
 print(winning_ticket)
 print(my_ticket)
