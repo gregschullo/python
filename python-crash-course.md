@@ -167,3 +167,63 @@ You can send a copy of a list to a function with slice notation `function_name(l
 A function can accept several kinds of arguments(positional and arbitrary). The parameter that accepts an arbitrary number of arguments must be placed last in the function definition.  
 
 A double asterisks before a parameter (**parameter_name) will create an empty dictionary called parameter_name and pack whatever key-value pairs it receives into the dictionary.
+
+The best practice for importing functions is to import the function or functions you want or to import the entire module and use dot notation. This leads to clear code that’s easy to read and understand.
+
+### Styling Functions
+
+Functions should have descriptive names and these names should use lowercase letters and underscores.  
+
+Every function should have a comment that explains concisely what the function does.  
+
+If you specify a default value for a parameter, no spaces should be used on either side of the equal sign.  
+
+[PEP 8](https://www.python.org/dev/peps/pep-0008/) recommends that you limit lines of code to 79 characters so every line is visible in a reasonably sized editor window.
+
+## Chapter 9 - Classes
+
+**classes** - classes combine functions and data into one neat package that can be used in flexible and efficient ways.  
+
+Object-oriented programming is one of the most effective approaches to writing software. In object-oriented programming you write classes that represent real-world things and situations, and you create objects based on these classes.  
+Making an object from a class is called instantiation, and you work with instances of a class.  
+
+**method** - a function that is a member of a class  
+
+Any variable prefixed with `self` is available to every method in the class, and also able to be accessed through any instance created from the class.
+
+**attributes** - variables that are accessible through instances  
+**inheritance** - allows a class (child class) to have access to (inherit) all attributes, methods, and properties from another class (parent class)  
+
+The parent class __init__() method is often needed to be called by a child class to initialize any attributes defined in the parent class.  
+Child classes must be defined in the same file as the parent class.  
+Example: `class ChildClass(ParentClass):`  
+
+**super()** - the super function allows for calling a method from the parent class. The name "super" comes from a convention of calling the parent class a *superclass* and the child class a *subclass*  
+
+**Override methods from the parent class** - Any method from the parent class can be overridden if it does not fit the model of the child class. To override a method inherited from the parent class, define a method in the child class with the same name as the method in the parent class you wish to override. Python will disregard the parent class method and only pay attention to the method defined in the child class.  
+
+### Importing Classes
+
+Python allows for storing classes in modules and importing them as needed into a program.  
+
+### Importing Multiple Classes from a Module
+
+As many classes as needed can be imported into a program file. If more than one class is needed, both classes will need to be imported into your file.  
+Multiple classes from a module are imported by separating each class with a comma.  
+Example: `from module_name import Class1, Class2`  
+
+You can import every class from a module by using an asterisk (*)  
+`from module_name import *`  
+This method is not recommended for a few reasons:  
+
+1. It's helpful to be able to read the import statements to gain an understanding of which classes a program uses.  
+1. This approach can lead to confusion with names in the file.  
+
+### Importing a Module into a Module
+
+When classes are stored in several modules, a class in one module depends on a class in another module. When this is the case, you can import the required class into the first module.  
+
+### Using Aliases
+
+An alias can be used when importing classes. This is helpful if class names are long.  
+Example: `from module_name import LongClassName as LCN`  
