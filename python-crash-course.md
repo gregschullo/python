@@ -227,3 +227,7 @@ When classes are stored in several modules, a class in one module depends on a c
 
 An alias can be used when importing classes. This is helpful if class names are long.  
 Example: `from module_name import LongClassName as LCN`  
+
+### The Python Standard Library
+
+The Python Standard Library is a set of modules included with every Python installation. Any function or class in the standard library may be used by importing it into your code.  
