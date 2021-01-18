@@ -231,3 +231,17 @@ Example: `from module_name import LongClassName as LCN`
 ### The Python Standard Library
 
 The Python Standard Library is a set of modules included with every Python installation. Any function or class in the standard library may be used by importing it into your code.  
+
+### Styling Classes
+
+Class names should be written in CamelCase and should not use underscores.  
+
+Instance and module names should be written in lowercase with underscores between words.  
+
+Every class should have a docstring immediately following the class definition giving a brief description of what the class does.  
+Every module should also have a docstring to describe what the classes in a module can be used for.  
+
+Blank lines should be used to organized code, but should not be used excessively.  
+Within a class, use one blank line between methods and within a module, use two blank lines to separate classes.  
+
+## Chapter 10 - Files and Exceptions

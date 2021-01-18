@@ -6,21 +6,34 @@
 
 from random import choice
 
-lottery = ['42 ', '28 ', '73 ', '5 ', '12 ', '83 ', '10 ', '2 ', '96 ', '55 ', 'a ', 'v ', 'g ', 'z ', 'p ']
-my_ticket = ['42 ', 'v ', '5 ', 'g ']
+lottery = ['42', '28', '73', '5', '12', '83', '10', '2', '96', '55', 'a', 'v', 'g', 'z', 'p']
+my_ticket = ['42', 'v', '5', 'g']
 
-winning_ticket = ''
-i = 0
-j = 0
+def generate_lottery_ticket(lottery):
+    value_list = []
+    while len(value_list) < 4:
+        ticket_value = choice(lottery)
+        if ticket_value not in value_list:
+            value_list.append(ticket_value)
+    value_list.sort()
+    value_list = ' '.join(value_list)
+    return value_list
 
+def generate_my_ticket(my_ticket):
+    my_ticket.sort()
+    my_ticket = ' '.join(my_ticket)
+    return my_ticket
+
+winning_ticket = generate_lottery_ticket(lottery)
+my_ticket = generate_my_ticket(my_ticket)
+
+attempts = 0
 while winning_ticket is not my_ticket:
-        while i < 4:
-            winning_ticket += choice(lottery)
-            i += 1
-        if winning_ticket is not my_ticket:
-            # Code to run winning ticket number loop again
-            j += 1
+    attempts += 1
+    winning_ticket = generate_lottery_ticket(lottery)
+    if winning_ticket == my_ticket:
+        break
 
-print(winning_ticket)
-print(my_ticket)
-print(f"I won the lottery after buying {i} tickets!")
+print(f"The winning ticket is: {winning_ticket}")
+print(f"My ticket is: {my_ticket}")
+print(f"I won the lottery after buying {attempts} tickets!")
