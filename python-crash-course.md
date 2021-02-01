@@ -3,6 +3,8 @@ id: python-crash-course
 title: Python Crash Course
 ---
 
+[Python Crash Course](https://www.amazon.com/Python-Crash-Course-Eric-Matthes-ebook/dp/B07J4521M3/ref=tmm_kin_swatch_0?_encoding=UTF8&qid=1611752881&sr=8-3), 2nd Edition by [Eric Matthes](https://www.amazon.com/Eric-Matthes/e/B01DPU378I?ref_=dbs_p_ebk_r00_abau_000000)  
+
 ## Chapter 1 Notes - Getting Started
 
 ## Chapter 2 Notes - Variables and Simple Data Types
@@ -30,21 +32,21 @@ Python has a special syntax for accessing the last element in a list. By asking 
 
 The simplest way to add a new element to a list is to append the item to the list.
 
-You can add a new element at any position in your list by using the insert() method.
+You can add a new element at any position in your list by using the `insert()` method.
 
 If you know the position of the item you want to remove from a list, you can use the del statement.
 
-The pop() method removes the last item in a list, but it lets you work with that item after removing it.  
+The `pop()` method removes the last item in a list, but it lets you work with that item after removing it.  
 
-when you want to delete an item from a list and not use that item in any way, use the del statement; if you want to use an item as you remove it, use the pop() method.
+when you want to delete an item from a list and not use that item in any way, use the del statement; if you want to use an item as you remove it, use the `pop()` method.
 
 If you only know the value of the item you want to remove, you can use the remove() method.
 
 - the remove method only removes the first instance of the value you specify. If a value appears more than once in a list, you would need to use a loop to remove all instances.  
 
 List Sorting Methods:  
-sort() - permanently sorts a list  
-sorted() - displays a list as if it were sorted, but does not alter the list  
+`sort()` - permanently sorts a list  
+`sorted()` - displays a list as if it were sorted, but does not alter the list  
 
 ## Chapter 4 Notes - Working with Lists
 
@@ -52,7 +54,7 @@ When you want to do the same action with every item in a list, you can use Pytho
 
 Python's use of indentation makes code very easy to read.  
 
-The range() function makes it easy to generate a series of numbers.  
+The `range()` function makes it easy to generate a series of numbers.  
 
 **slice** - a specific group of items in a list
 
@@ -245,3 +247,66 @@ Blank lines should be used to organized code, but should not be used excessively
 Within a class, use one blank line between methods and within a module, use two blank lines to separate classes.  
 
 ## Chapter 10 - Files and Exceptions
+
+**exceptions** - special objects Python creates to manage errors that arise while a program is running.  
+
+**json module** - allows you to save user data so it isn't lost when your program stops running.  
+
+### Reading from a File
+
+Reading from a file is used in any situation you want to analyze or modify information stored in a file.  
+The first step is is to read a file into memory.  You can read the entire contents of a file, or you can work through the file one line at a time.  
+
+### Reading an Entire File
+
+**open() function** - to do any work with a file you need to open the file to access it.  
+The open() function needs the name of the file you want to open as an argument. `open(file_name)`  
+Python looks for the file passed as argument in the directory where the program that's currently being executed is stored.  
+Python returns an object representing the file being opened.  
+Example: `with open(file_name.txt) as file_object`  
+
+**with** - Python keyword closes the file once access to it is no longer needed.  
+It is possible to close files with the close() function, but errors in closing files causes difficult to diagnose issues. It is easier to use the with keyword and let Python handle closing a file for you.  
+
+## File Paths
+
+If the file you are accessing is not in the same directory as the directory the program you are executing is located in, you can pass the relative file path (path to file relative to current directory) as the argument to the open() function.  
+You can also use absolute paths (path to file from root directory). If using an absolute path, it is helpful to assign them to a variable and then passing the variable as the argument to open().  
+
+### Reading Line by Line
+
+You will often want to examine each line of a file to look for certain information in the file.  
+You can use a for loop on the file object to examine each line in file individually.  
+
+```python
+with open(file_name) as file_object:
+  for line in file_object
+    print(line)
+```
+
+the rstrip() function can be used to eliminate extra lines created with the print() function.  
+
+### Making a List of Lines from a File
+
+You can store each line in a list using the readlines() method. You can then use a loop to print each line from the list and strip off excess whitespace with the rstrip() method.  
+
+```python
+with open(file_name) as file_object:
+  lines = file_object.readlines()
+
+for line in lines:
+  print(line.rstrip())
+```
+
+### Working with a File's Contents
+
+After a file is read into memory, you can do whatever you want with that data.  
+
+When Python reads from a text file, it interprets all text in the file as a string. If a number is read in and you want to work with that value in a numerical context, it needs to be converted to an integer using the int() function or a float using the float() function.  
+
+### Large Files: One Million Digits
+
+Python has no inherent limit to how much data you can work with; you can work with as much data as your system’s memory can handle.
+
+### Writing to a File
+

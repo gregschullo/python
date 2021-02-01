@@ -1,0 +1,3 @@
+In Python you can use loops, flags, and if/else statements in your programs. 
+In Python you can use slices, tuples, the strip methods, and read in files to working with them.
+In Python you can use dictionaries and lists to store information and access it at a later point in time.
